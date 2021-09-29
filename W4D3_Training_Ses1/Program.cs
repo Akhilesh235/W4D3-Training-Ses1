@@ -13,21 +13,24 @@ namespace W4D3_Training_Ses1
 
             try
             {
-                Method1(4);
+                Console.WriteLine("Write a emailID");
+                var usrEmail = Console.ReadLine();
+                validateEmail(usrEmail);
             }
 
             catch (Exception ex)
             {
-                Console.WriteLine("Exception caught");
+                Console.WriteLine(ex.Message);
             }
 
             Console.ReadLine();
 
         }
 
-        static void Method1(int a)
+        static void validateEmail(string a)
 
         {
+            Regex regex = new Regex
             try
             {
                 Method2(a);
@@ -40,19 +43,19 @@ namespace W4D3_Training_Ses1
             }
         }
 
-        static void Method2(int a)
-        {
-            try
-            {
-                var res = a / 0;
+        //static void Method2(int a)
+        //{
+        //    try
+        //    {
+        //        var res = a / 0;
 
-            }
+        //    }
 
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
+        //    catch (Exception ex)
+        //    {
+        //        throw;
+        //    }
+        //}
         
     }
 }
