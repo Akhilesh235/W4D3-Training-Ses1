@@ -15,21 +15,30 @@ namespace W4D3_Training_Ses1
     {
         static void Main(string[] args)
         {
-            Action action = () => { Console.WriteLine("this is an empty action"); };
-            Action<int,int> action1 = (a, b) =>
+            Predicate<string> predicate = (str) =>
             {
-                Console.WriteLine("product of a and b is: {0}", a * b);
+                if (str.Length > 10)
+                {
+                    return true;
+                }
+
+                return false;
             };
 
-            Action<double, double> action2 = (a, b) =>
+            Predicate<int> predicate1 = (a) =>
             {
-                Console.WriteLine("product of a and b is: {0}", a * b);
+                if (a < 0)
+                {
+                    return true;
+                }
+
+                return false;
             };
 
 
-            action();
-            action1(10,20);
-            action2(10.5, 11.9);
+            Console.WriteLine(predicate("str"));
+            Console.WriteLine(predicate("This is a string"));
+            Console.WriteLine(predicate1(9));
             Console.ReadLine();
 
         }
