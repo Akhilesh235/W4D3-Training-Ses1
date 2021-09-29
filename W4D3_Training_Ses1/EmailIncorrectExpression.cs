@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace W4D3_Training_Ses1
 {
-    public class EmailIncorrectExpression : Exception
-    {
-        public EmailIncorrectExpression()
-        {
+    //public class EmailIncorrectExpression : Exception
+    //{
+    //    public EmailIncorrectExpression()
+    //    {
 
-        }
-        public EmailIncorrectExpression(string email) : 
-    }
+    //    }
+    //    public EmailIncorrectExpression(string email) : 
+    //}
 }
