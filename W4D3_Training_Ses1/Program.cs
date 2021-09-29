@@ -15,24 +15,21 @@ namespace W4D3_Training_Ses1
     {
         static void Main(string[] args)
         {
-            Func<int, int, int> func = sum;
-            Func<int> func1 = returnConstantValue;
-            Func<int, int> func2 = (a) => { return a + 100; };
+            Action action = () => { Console.WriteLine("this is an empty action"); };
+            Action<int,int> action1 = (a, b) =>
+            {
+                Console.WriteLine("product of a and b is: {0}", a * b);
+            };
 
-            Func<int, bool> isNegative = (a) =>
-             {
-                 if (a < 0)
-                 {
-                     return true;
-                 }
+            Action<double, double> action2 = (a, b) =>
+            {
+                Console.WriteLine("product of a and b is: {0}", a * b);
+            };
 
-                 return false;
-             };
 
-            Console.WriteLine(func(10, 20));
-            Console.WriteLine(func1());
-            Console.WriteLine(func2(10));
-
+            action();
+            action1(10,20);
+            action2(10.5, 11.9);
             Console.ReadLine();
 
         }
